@@ -18,11 +18,26 @@
     "dependencies": {
       "angular2": "npm:angular2@^2.0.0-beta.1",
       "babel-runtime": "npm:babel-runtime@^6.3.13",
+      "bootstrap": "github:twbs/bootstrap@3",
+      "css": "github:systemjs/plugin-css@^0.1.20",
       "normalize.css": "github:necolas/normalize.css@^3.0.3",
-      "rxjs": "npm:rxjs@^5.0.0-beta.0"
+      "rxjs": "npm:rxjs@^5.0.0-beta.0",
+      "twbs/bootstrap": "github:twbs/bootstrap@^3.3.6"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^6.4.0"
+      "babel": "npm:babel-core@^6.4.0",
+      "clean-css": "npm:clean-css@^3.4.9",
+      "core-js": "npm:core-js@^1.1.4"
+    },
+    "overrides": {
+      "github:twbs/bootstrap@3.3.6": {
+        "main": "js/bootstrap",
+        "shim": {
+          "js/bootstrap": [
+            "jquery"
+          ]
+        }
+      }
     }
   },
   "dependencies": {

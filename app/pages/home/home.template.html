@@ -1,1 +1,13 @@
-Welcome home!
+Tags
+
+<input #newTag type="text" name="name" value="">
+
+<button (click)="onAdd(newTag.value)">Add</button>
+<ul class="heroes">
+    <li *ngFor="#tag of tags"
+      [class.selected]="tag === selectedTag"
+      (click)="onSelect(tag)">
+      <span class="badge">{{tag.id}}</span> {{tag.nome}}
+      <span (click)="onRemove(tag)">x</span>
+    </li>
+</ul>
